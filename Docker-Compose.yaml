@@ -10,25 +10,28 @@ services:
         - type: bind
           source: ./nginx/nginx.conf
           target: /etc/nginx/nginx.conf
-    Front-End:
-        build: ./Front_End
+    front-end:
+        build: ./front_end
         ports:
         - target: 5000
           published: 5000
           protocol: tcp
-    Attributes_API:
-        build: ./Attributes_API
+    attributes_api:
+        build: ./attributes_api
+        ports:
         - target: 5000
-          published: 5000
+          published: 5001
           protocol: tcp    
-    Attributes_API:
-        build: ./Colour_API
+    colour_api:
+        build: ./colour_api
+        ports:
         - target: 5000
-          published: 5000
+          published: 5002
           protocol: tcp   
-    Object_Manipulation:
-        build: ./Object_Manipulation
+    object_manipulation:
+        build: ./object_manipulation
+        ports:
         - target: 5000
-          published: 5000
+          published: 5003
           protocol: tcp   
     
