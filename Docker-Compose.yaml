@@ -1,0 +1,34 @@
+version: "3.8"
+services:
+    nginx:
+        image: nginx:alpine 
+        ports:
+        - target: 80
+          published: 80
+          protocol: tcp
+        volumes:
+        - type: bind
+          source: ./nginx/nginx.conf
+          target: /etc/nginx/nginx.conf
+    Front-End:
+        build: ./Front_End
+        ports:
+        - target: 5000
+          published: 5000
+          protocol: tcp
+    Attributes_API:
+        build: ./Attributes_API
+        - target: 5000
+          published: 5000
+          protocol: tcp    
+    Attributes_API:
+        build: ./Colour_API
+        - target: 5000
+          published: 5000
+          protocol: tcp   
+    Object_Manipulation:
+        build: ./Object_Manipulation
+        - target: 5000
+          published: 5000
+          protocol: tcp   
+    
