@@ -1,4 +1,4 @@
-FROM python:3.5
+FROM python:3.7
 RUN apt-get update && apt-get install -y python3-pip
 COPY . .
 RUN pip3 install -r requirements.txt
