@@ -131,6 +131,4 @@ dmypy.json
 #Inventory File
 inventory.yaml
 /inventory.yaml
-inventory.yml 
-/inventory.yml
-
+inventory.yaml/
