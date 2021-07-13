@@ -1,3 +1,12 @@
 all:
-  hosts:
-    :
+  vars:
+    ansible_user: tommycalvin
+    ansible_ssh_private_key_files: "~/id_rsa"
+    ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
+  children:
+    manager:
+      hosts:
+        swarm-manager:
+    worker:
+      hosts:
+        swarm-worker:
