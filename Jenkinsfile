@@ -1,6 +1,11 @@
 pipeline {
     agent any
     stages {
+        stage ('Clean Machine') {
+            steps{
+                sh "sudo docker prune -a"
+            }
+        }
         stage('Build') {
             steps {
                 sh "sudo docker-compose build"
