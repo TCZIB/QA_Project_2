@@ -3,7 +3,6 @@ pipeline {
     stages {
         stage ('Clean Machine') {
             steps{
-                sh "docker-compose rm -f"
                 sh "docker image prune -f"
             }
         }
