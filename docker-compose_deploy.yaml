@@ -1,0 +1,37 @@
+version: "3.8"
+services:
+    nginx:
+        image: nginx:alpine 
+        ports:
+        - target: 80
+          published: 80
+          protocol: tcp
+        volumes:
+        - type: bind
+          source: ./nginx/nginx.conf
+          target: /etc/nginx/nginx.conf
+    front-end:
+        image: tibialzib/front-end:latest
+        ports:
+        - target: 5000
+          published: 5000
+          protocol: tcp
+    attributes_api:
+        build: ./attributes_api
+        ports:
+        - target: 5000
+          published: 5001
+          protocol: tcp    
+    colour_api:
+        build: ./colour_api
+        ports:
+        - target: 5000
+          published: 5002
+          protocol: tcp   
+    object_manipulation:
+        build: ./object_manipulation
+        ports:
+        - target: 5000
+          published: 5003
+          protocol: tcp   
+    

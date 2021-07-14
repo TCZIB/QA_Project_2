@@ -15,8 +15,8 @@ pipeline{
                     }
             stage('Tag & Push object_maniputlation'){
                 steps{
-                    sh "sudo docker tag build_object_maniputlation tibialzib/object_maniputlation:latest"
-                    sh "sudo docker push tibialzib/object_maniputlation:latest"
+                    sh "sudo docker tag build_object_manipulation tibialzib/object_maniputlation:latest"
+                    sh "sudo docker push tibialzib/object_manipulation:latest"
                         }
                     }
             stage('Tag & Push colour_api'){
@@ -31,9 +31,9 @@ pipeline{
                     sh "sudo docker push tibialzib/attributes_api:latest"
                         }
                     }
-            stage('Deploy App'){
+            stage('Run Ansible'){
                 steps{
-                    sh "sudo docker-compose pull && docker-compose up -d"
+                    sh "ansible-playbook playbook.yaml inventory.yaml"
                 }
             }
         }
