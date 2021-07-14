@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage ('Clean Machine') {
             steps{
-                sh "docker image prune -f"
+                sh "sudo docker image prune -f"
             }
         }
         stage('Build') {
