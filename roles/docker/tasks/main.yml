@@ -27,9 +27,19 @@
       pkg: 
       -  docker-ce
       -  docker-ce-cli
-      - containerd.io
+      -  containerd.io
       update_cache: true
 
   - name: Install Docker SDK
     pip:
       name: docker
+
+  - name: Install Jsondiff
+    pip:
+      name: jsondiff
+
+  - name: Add User To Docker
+    user:
+      name: tommycalvin
+      groups: docker
+      append: true
