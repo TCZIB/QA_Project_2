@@ -10,6 +10,7 @@ pipeline{
             stage('Tag & Push Image'){
                 steps{
                     sh "sudo docker tag build_front-end tibialzib/front-end:latest"
+                    sh "sudo docker push tibialzib/front-end:latest"
                         }
                     }
             stage('Deploy App'){
