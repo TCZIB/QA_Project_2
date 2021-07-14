@@ -11,7 +11,7 @@ services:
           source: ./nginx/nginx.conf
           target: /etc/nginx/nginx.conf
     front-end:
-        image: tibialzib/webservice:front-end
+        image: tibialzib/front-end:latest
         build: ./front_end
         ports:
         - target: 5000

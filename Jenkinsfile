@@ -9,7 +9,7 @@ pipeline{
                 steps{
                     script{
                         if (env.rollback == 'false'){
-                            image = docker.build("tibialzib/webserice:front-end")
+                            image = docker.build("tibialzib/front-end")
                         }
                     }
                 }
@@ -19,7 +19,7 @@ pipeline{
                     script{
                         if (env.rollback == 'false'){
                             docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials'){
-                                image.push("${env.app_version}")
+                                image.push("latest")
                             }
                         }
                     }
