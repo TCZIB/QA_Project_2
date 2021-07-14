@@ -6,7 +6,7 @@ pipeline {
                 sh "sudo docker-compose build"
             }
         }
-        }
     }
+
 }
 
