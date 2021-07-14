@@ -15,7 +15,7 @@ pipeline{
                     }
             stage('Tag & Push object_maniputlation'){
                 steps{
-                    sh "sudo docker tag build_object_manipulation tibialzib/object_maniputlation:latest"
+                    sh "sudo docker tag build_object_manipulation tibialzib/object_manipulation:latest"
                     sh "sudo docker push tibialzib/object_manipulation:latest"
                         }
                     }
