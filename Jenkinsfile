@@ -7,6 +7,8 @@ pipeline{
         stages{
             stage('Build Image'){
                 steps{
+                    sh "pwd"
+                    sh "ls"
                     script{
                         if (env.rollback == 'false'){
                             image = docker.build("tibialzib/front-end")
