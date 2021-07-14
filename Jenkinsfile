@@ -11,7 +11,7 @@ pipeline{
                     sh "ls"
                     script{
                         if (env.rollback == 'false'){
-                            image = docker.build("tibialzib/front-end")
+                            image = docker.build("./front-end")
                         }
                     }
                 }
