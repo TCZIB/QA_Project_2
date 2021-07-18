@@ -31,9 +31,10 @@ pipeline{
                     sh "sudo docker push tibialzib/attributes_api:latest"
                         }
                     }
-            stage('Run Ansible'){
+            stage('Copy Compose'){
                 steps{
-                    sh "ansible-playbook inventory.yaml playbook.yaml"
+                    sh "scp ./build/docker-compose.yaml tommycalvin@manager-18-04:docker-compose.yaml"
+                    sh "ssh tommycalvin@manager-18-04 docker stack deploy --compose-file docker-compose.yaml webservice"
                 }
             }
         }
