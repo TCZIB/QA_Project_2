@@ -1,0 +1,6 @@
+- name: Deploy Containers From Compose
+  docker_stack:
+    state: present
+    name: Website
+    compose:
+      - ~/QA_Project_2/Docker-Compose.yaml
