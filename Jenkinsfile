@@ -33,8 +33,8 @@ pipeline{
                     }
             stage('Copy Compose'){
                 steps{
-                    sh "sudo scp ./build/docker-compose.yaml jenkinsn@manager-18-04:docker-compose.yaml"
-                    sh "sudo ssh jenkins@manager-18-04 docker stack deploy --compose-file docker-compose.yaml webservice"
+                    sh "sudo scp ./build/docker-compose.yaml tommycalvin@manager-18-04:docker-compose.yaml"
+                    sh "sudo ssh tommycalvin@manager-18-04 docker stack deploy --compose-file docker-compose.yaml webservice"
                 }
             }
         }
