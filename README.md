@@ -1,5 +1,5 @@
 
-# QA_Project_1 ZMR
+# QA_Project_2
 
 Please ignore spelling, spelling error correction isnt working on VSCODE :)
 If anything doesnt make sense please leave a comment and ill get to fixing it!
