@@ -11,10 +11,8 @@ If anything doesnt make sense please leave a comment and ill get to fixing it!
     - Personal goals
 - Design specification
     - Outline
-    - Tree structure
-    - Database ERD
 - Risk assesment
-- Trello Board
+- Kanban Board
 - Testing
 - Pipeline overview
 - Changes as the project has progressed
@@ -63,16 +61,20 @@ As with any web application there is always some threat to the application and/o
 |A first or third party could release important data such as passwords|2|3|A disgruntled employee, yourself or someone else might accidentally or maliciously release senitive information that allows unauthorised users to view sensitive content|Code could be stolen or important information could be leaked|Code would need to be changed, Passwords would need to be changed and re-distributed|Ensure employees are given the relevant access and not overall access, Ensure any important information is stored securley so if its leaked its harder to decode, Use 2FA To secure sensitive info so its not imediatly accesible|1|1|
 |Connection to the database is lost|1|3|For whatever reason the connection to the database might be lost|The service will stop working functionally but the website will still be live|A new connection needs to be re-established or a backup of the database needs to be made|Ensure there is a fallback option, also ensure a repulatable cloud service is used. Ensure the used service allows for expansion |1|1|
 
-## Git board
+## Kanban board
 I will be using a GIT Project board to track my project, it can be found on the git page
 
 ## Testing
 
-TBA
+Testing is something that still needs to be done and completed
 
 ## Pipeline Overview
 
-TBA
+Here is a quick overview on how to code goes from source code to being tested then deployed:
+
+![Pipeline Overview](https://i.imgur.com/SfyawDw.png)
+
+The pipeline has several stages from original source code being written to VM's being automatically configured and the stacks being deployed across them
 
 ## Changes as the project has progressed
 
