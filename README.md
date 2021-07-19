@@ -49,7 +49,7 @@ I am finding this project very difficult so i would be satisfied if i could atle
 
 The most important structure to this program will be the backend, there must be services in containers in the backend that can be deployed across a swarm. This means they must be able to be configured in a way they can speak to eachother and not cause conflicts. See below a design diagram of how the service will work:
 
-
+![Service Breakdown](https://i.imgur.com/Bf1Gd7Z.png)
 
 ## Risk assesment
 
