@@ -9,8 +9,8 @@ pipeline{
         
             stage('Tag & Push front-end'){
                 steps{
-                    sh "sudo docker tag build_front-end tibialzib/front-end:latest"
-                    sh "sudo docker push tibialzib/front-end:latest"
+                    sh "sudo docker tag build_front-end tibialzib/front_end:latest"
+                    sh "sudo docker push tibialzib/front_end:latest"
                         }
                     }
             stage('Tag & Push object_maniputlation'){
