@@ -17,23 +17,28 @@ def generate_object():
     dictionary.pop('Colour', None)
 
     if colour == "red":
-        dictionary["Anger"] = dictionary["Anger"] + 10
+        dictionary["Anger"] = dictionary["Anger"] + 20
         statBoost = "Anger"
+        statBoostPoint = "+20"
     elif colour == "blue":
         dictionary["Intelligence"] = dictionary["Intelligence"] - 10
         statBoost = "Intelligence"
+        statBoostPoint = "-10"
     elif colour == "green":
-        dictionary["Ego"] = dictionary["Ego"] + 10
+        dictionary["Ego"] = dictionary["Ego"] + 15
         statBoost = "Ego"
+        statBoostPoint = "+15"
     elif colour == "yellow":
-        dictionary["Likeability"] = dictionary["Likeability"] + 10
+        dictionary["Likeability"] = dictionary["Likeability"] + 25
         statBoost = "Likeability"
+        statBoostPoint = "+25"
     elif colour == "white":
-        dictionary["Madness"] = dictionary["Madness"] + 10
+        dictionary["Madness"] = dictionary["Madness"] + 8
         statBoost = "Madness"
+        statBoostPoint = "+8"
 
     emotion = max(dictionary.items(), key=operator.itemgetter(1))[0]
 
-    out = "This is a " + colour + " core with the emotion " + emotion.lower() + " their colour has an effect on " + str(statBoost)
+    out = "This is a " + colour + " core with the emotion " + emotion.lower() + " their colour has a " + str(statBoostPoint) + " effect on " + str(statBoost) + "\n" + str(dictionary).strip(" { } ' ")
 
     return Response(out, mimetype='text/plain')
