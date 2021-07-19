@@ -1,0 +1,28 @@
+<html>
+    <style>
+        table, th, td, tr {
+            border-collapse:separate;
+            border:solid black 1px;
+            border-radius:3px;
+            -moz-border-radius:3px;
+            width: 95%;
+            text-align: center;
+            margin: auto;
+            table-layout: fixed;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size:1.5vw;
+        }
+    </style>
+    <body>
+        <table>
+            <tr>
+                <th> {{ currentCore }} </th>
+            </tr>
+            {% for item in items %}
+            <tr>
+                <td>  {{ item.core }}</td>
+            </tr>
+            {% endfor %}
+        </table> 
+    </body>
+</html>

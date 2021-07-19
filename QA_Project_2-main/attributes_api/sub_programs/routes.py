@@ -1,4 +1,5 @@
 from sub_programs import app
+from flask import jsonify
 import random
 
 attributes = ["Intelligence","Madness","Anger","Ego","Likeability"]
@@ -9,4 +10,4 @@ def get_attributes():
     for attribute in attributes:
         output[attribute] = random.randint(1,90)
     
-    return output
+    return jsonify(output)

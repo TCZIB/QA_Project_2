@@ -10,7 +10,7 @@ services:
         - type: bind
           source: ./nginx/nginx.conf
           target: /etc/nginx/nginx.conf
-    front-end:
+    front_end:
         build: ./front_end
         ports:
         - target: 5000
